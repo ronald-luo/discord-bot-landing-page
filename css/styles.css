@@ -1,0 +1,32 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: red;
+  color: white;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vh;
+  height: 4em;
+}
+
+header ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 3.5em 0 0;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */
