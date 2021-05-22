@@ -83,6 +83,7 @@ body {
   padding: 0 10vw 0 10vw;
   display: grid;
   grid-template-columns: repeat(2, 500px);
+  justify-content: center;
 
   img {
     height: 500px;

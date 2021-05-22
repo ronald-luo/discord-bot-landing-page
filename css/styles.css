@@ -77,6 +77,9 @@ body {
   display: grid;
   -ms-grid-columns: (500px)[2];
       grid-template-columns: repeat(2, 500px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .info img {
