@@ -40,10 +40,17 @@ body {
 
 .container .cta {
   padding-top: 2em;
-  width: 350px;
-  height: 60px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 80vw;
+  height: 10vh;
+}
+
+@media (max-width: 840px) {
+  .container .cta {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (80vw)[1];
+        grid-template-columns: repeat(1, 80vw);
+  }
 }
 
 .container .cta button {
@@ -59,10 +66,23 @@ body {
   color: white;
 }
 
+@media (max-width: 840px) {
+  .container .cta button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .container .cta a img {
   position: relative;
   top: 4px;
   height: 20px;
+}
+
+@media (max-width: 840px) {
+  .container .cta a img {
+    margin-top: 1em;
+  }
 }
 
 .container .cta a {
@@ -82,8 +102,25 @@ body {
           justify-content: center;
 }
 
+@media (max-width: 840px) {
+  .info {
+    -ms-grid-columns: (300px)[1];
+        grid-template-columns: repeat(1, 300px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 3em 0 3em 0;
+  }
+}
+
 .info img {
   height: 500px;
+}
+
+@media (max-width: 840px) {
+  .info img {
+    height: 300px;
+  }
 }
 
 .info .info-box {
@@ -91,6 +128,13 @@ body {
   position: relative;
   height: 500px;
   width: 500px;
+}
+
+@media (max-width: 840px) {
+  .info .info-box {
+    width: 80vw;
+    text-align: center;
+  }
 }
 
 .info .info-box h1 {
@@ -107,6 +151,12 @@ body {
 
 .info #right {
   text-align: right;
+}
+
+@media (max-width: 840px) {
+  .info #right {
+    text-align: center;
+  }
 }
 
 footer {

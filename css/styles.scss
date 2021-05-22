@@ -15,6 +15,14 @@ $color_5: #a7465d;
 $font_2: "Lora", serif;
 $font_1: "Poppins", sans-serif;
 
+$phone: 840px;
+
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
 body {
   background-color: $color_1;
   color: $color_4;
@@ -48,10 +56,12 @@ body {
 
   .cta {
     padding-top: 2em;
-    width: 350px;
-    height: 60px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 80vw;
+    height: 10vh;
+    @include phone {
+      display: grid;
+      grid-template-columns: repeat(1, 80vw);
+    }
 
     button {
       width: 150px;
@@ -64,12 +74,19 @@ body {
       border-width: 0px;
       background-color: $color_5;
       color: $color_4;
+      @include phone {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     a img {
       position: relative;
       top: 4px;
       height: 20px;
+      @include phone {
+        margin-top: 1em;
+      }
     }
     a {
       text-decoration: none;
@@ -85,14 +102,27 @@ body {
   grid-template-columns: repeat(2, 500px);
   justify-content: center;
 
+  @include phone {
+    grid-template-columns: repeat(1, 300px);
+    justify-content: center;
+    margin: 3em 0 3em 0;
+  }
+
   img {
     height: 500px;
+    @include phone {
+      height: 300px;
+    }
   }
   .info-box {
     display: inline-block;
     position: relative;
     height: 500px;
     width: 500px;
+    @include phone {
+      width: 80vw;
+      text-align: center;
+    }
 
     h1 {
       padding-top: 2.5em;
@@ -109,6 +139,9 @@ body {
 
   #right {
     text-align: right;
+    @include phone {
+      text-align: center;
+    }
   }
 }
 
